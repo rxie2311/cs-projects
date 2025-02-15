@@ -9,3 +9,8 @@ OVERVIEW
 --------------------------------------------------
 School Projects: A folder containing all of the coding assignments done during university at UWO.
 Personal Projects: A folder containing all personal coding projects that I have done.
+
+INFO
+--------------------------------------------------
+Author: Raymond Xie
+Email: raymondxie.2004@gmail.com
