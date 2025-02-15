@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module player</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>player</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Craymo%5Cpycharmprojects%5Cgroup22%5Cplayer.py">c:\users\raymo\pycharmprojects\group22\player.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pydoc.html">pydoc</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="player.html#Player">Player</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Player">class <strong>Player</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Player">Player</a>(username:&nbsp;str,&nbsp;password:&nbsp;str,&nbsp;gameInfo,&nbsp;questionInfo,&nbsp;achievements,&nbsp;avatarID:&nbsp;int)<br>
+&nbsp;<br>
+The&nbsp;<a href="#Player">Player</a>&nbsp;class&nbsp;represents&nbsp;a&nbsp;user&nbsp;that&nbsp;can&nbsp;log&nbsp;in&nbsp;and&nbsp;save&nbsp;progress.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Player-__init__"><strong>__init__</strong></a>(self, username: str, password: str, gameInfo, questionInfo, achievements, avatarID: int)</dt><dd><tt>Constructor&nbsp;that&nbsp;generates&nbsp;a&nbsp;<a href="#Player">Player</a>&nbsp;<a href="builtins.html#object">object</a>,&nbsp;which&nbsp;stores&nbsp;all&nbsp;of&nbsp;a&nbsp;<a href="#Player">Player</a>'s&nbsp;stats&nbsp;and&nbsp;info.<br>
+&nbsp;<br>
+:param&nbsp;username:&nbsp;String;&nbsp;The&nbsp;player's&nbsp;username.<br>
+:param&nbsp;password:&nbsp;String;&nbsp;The&nbsp;player's&nbsp;password.<br>
+:param&nbsp;gameInfo:&nbsp;An&nbsp;array&nbsp;that&nbsp;stores&nbsp;player&nbsp;stats.<br>
+:param&nbsp;questionInfo:&nbsp;An&nbsp;array&nbsp;that&nbsp;stores&nbsp;the&nbsp;number&nbsp;of&nbsp;questions&nbsp;the&nbsp;player&nbsp;has&nbsp;answered&nbsp;correctly&nbsp;for&nbsp;each&nbsp;subject.<br>
+:param&nbsp;achievements:&nbsp;An&nbsp;array&nbsp;that&nbsp;stores&nbsp;the&nbsp;player's&nbsp;unlocked&nbsp;achievements.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Player-addAchievement"><strong>addAchievement</strong></a>(self, achievement)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;adds&nbsp;an&nbsp;achievement&nbsp;to&nbsp;player's&nbsp;achievement&nbsp;array.<br>
+&nbsp;<br>
+:param&nbsp;achievement:&nbsp;int;&nbsp;The&nbsp;achievement&nbsp;number&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;added.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Player-getAchievements"><strong>getAchievements</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;an&nbsp;array&nbsp;with&nbsp;the&nbsp;player's&nbsp;achievements.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;unlocked&nbsp;achievements&nbsp;in&nbsp;an&nbsp;array.</tt></dd></dl>
+
+<dl><dt><a name="Player-getAvatarID"><strong>getAvatarID</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Player-getGamesWon"><strong>getGamesWon</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;games&nbsp;the&nbsp;player&nbsp;has&nbsp;won.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;number&nbsp;of&nbsp;games&nbsp;won&nbsp;stat.</tt></dd></dl>
+
+<dl><dt><a name="Player-getHighScore"><strong>getHighScore</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;player's&nbsp;highscore&nbsp;on&nbsp;the&nbsp;profile.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;highscore&nbsp;record&nbsp;on&nbsp;the&nbsp;profile.</tt></dd></dl>
+
+<dl><dt><a name="Player-getNumGames"><strong>getNumGames</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;games&nbsp;the&nbsp;player&nbsp;has&nbsp;played.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;number&nbsp;of&nbsp;games&nbsp;played&nbsp;stat.</tt></dd></dl>
+
+<dl><dt><a name="Player-getNumQuestions"><strong>getNumQuestions</strong></a>(self, subject)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;questions&nbsp;a&nbsp;user&nbsp;has&nbsp;answered&nbsp;correctly&nbsp;for&nbsp;a&nbsp;specific&nbsp;subject.<br>
+&nbsp;<br>
+:param&nbsp;subject:&nbsp;String;&nbsp;The&nbsp;subject&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;searched&nbsp;for.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;total&nbsp;number&nbsp;of&nbsp;questions&nbsp;answered&nbsp;correctly&nbsp;for&nbsp;the&nbsp;subject,&nbsp;or&nbsp;False&nbsp;if&nbsp;invalid&nbsp;subject.</tt></dd></dl>
+
+<dl><dt><a name="Player-getPassword"><strong>getPassword</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;player's&nbsp;password.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;password.</tt></dd></dl>
+
+<dl><dt><a name="Player-getUsername"><strong>getUsername</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;player's&nbsp;username.<br>
+&nbsp;<br>
+:return:&nbsp;<a href="#Player">Player</a>'s&nbsp;username.</tt></dd></dl>
+
+<dl><dt><a name="Player-increaseGamesWon"><strong>increaseGamesWon</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;increases&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;games&nbsp;won&nbsp;by&nbsp;1.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Player-increaseNumGames"><strong>increaseNumGames</strong></a>(self)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;increases&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;games&nbsp;played&nbsp;by&nbsp;1.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Player-increaseQuestion"><strong>increaseQuestion</strong></a>(self, subject, amount)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;increases&nbsp;the&nbsp;total&nbsp;number&nbsp;of&nbsp;questions&nbsp;a&nbsp;user&nbsp;has&nbsp;answered&nbsp;correctly&nbsp;for&nbsp;a&nbsp;specific&nbsp;subject<br>
+by&nbsp;an&nbsp;amount.<br>
+&nbsp;<br>
+:param&nbsp;subject:&nbsp;String;&nbsp;The&nbsp;subject&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;searched&nbsp;for.<br>
+:param&nbsp;amount:&nbsp;int;&nbsp;The&nbsp;amount&nbsp;that&nbsp;the&nbsp;total&nbsp;is&nbsp;to&nbsp;be&nbsp;increased&nbsp;by.<br>
+&nbsp;<br>
+:return:&nbsp;False&nbsp;if&nbsp;invalid&nbsp;subject.</tt></dd></dl>
+
+<dl><dt><a name="Player-removeAchievement"><strong>removeAchievement</strong></a>(self, achievement)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;removes&nbsp;an&nbsp;achievement&nbsp;from&nbsp;the&nbsp;player's&nbsp;achievement&nbsp;array.<br>
+&nbsp;<br>
+:param&nbsp;achievement:&nbsp;int;&nbsp;The&nbsp;achievement&nbsp;number&nbsp;that&nbsp;is&nbsp;to&nbsp;be&nbsp;removed.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Player-setAvatarID"><strong>setAvatarID</strong></a>(self, num)</dt></dl>
+
+<dl><dt><a name="Player-setHighScore"><strong>setHighScore</strong></a>(self, newScore)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;sets&nbsp;a&nbsp;player's&nbsp;highscore&nbsp;on&nbsp;the&nbsp;profile.<br>
+&nbsp;<br>
+:param&nbsp;newScore:&nbsp;int;&nbsp;Highscore&nbsp;to&nbsp;be&nbsp;set&nbsp;as&nbsp;the&nbsp;player's&nbsp;highscore.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-currentUser"><strong>currentUser</strong></a>(datafile)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;retrieves&nbsp;the&nbsp;current&nbsp;user&nbsp;and&nbsp;creates&nbsp;a&nbsp;'<a href="#Player">Player</a>'&nbsp;<a href="builtins.html#object">object</a>&nbsp;for&nbsp;them.<br>
+&nbsp;<br>
+:param&nbsp;datafile:&nbsp;The&nbsp;txt&nbsp;file&nbsp;account&nbsp;information&nbsp;is&nbsp;stored&nbsp;in<br>
+:return:&nbsp;New&nbsp;<a href="#Player">Player</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;user&nbsp;inputted&nbsp;info&nbsp;stored&nbsp;in&nbsp;it.</tt></dd></dl>
+ <dl><dt><a name="-saveUser"><strong>saveUser</strong></a>(player: player.Player)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;saves&nbsp;the&nbsp;player's&nbsp;game&nbsp;progress&nbsp;into&nbsp;a&nbsp;player&nbsp;profile&nbsp;after&nbsp;the&nbsp;game&nbsp;ends.<br>
+&nbsp;<br>
+:param&nbsp;player:&nbsp;The&nbsp;player&nbsp;profile&nbsp;that&nbsp;the&nbsp;game&nbsp;progress&nbsp;will&nbsp;be&nbsp;saved&nbsp;to.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>player</strong> = &lt;player.Player object&gt;<br>
+<strong>testPlayer</strong> = &lt;player.Player object&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,423 @@
+﻿subject,questionPoints,question,answer,tutorial
+math,200,"234 + 879 = ?
+
+A: 1123
+B: 1113
+C: 1259
+D: 1200",1113,"4 + 9 = 13
+One gets carried over to the next step
+3 + 7 + 1 = 11
+One gets carried over to the next step
+2 + 8 + 1 = 11
+Line all the sums next to each other:
+1113"
+math,200,"567 - 43 = ?
+
+A: 550
+B: 542
+C: 520
+D: 524",524,"7 - 3 = 4
+6 - 4 = 2
+5 - 0 = 5
+Line all the differences next to each other:
+524"
+math,200,"23 x 29 = ?
+
+A: 667
+B: 666
+C: 660
+D: 707",667,"9 x 3 = 27
+2 gets carried over to the next step
+(9 x 2) + 2 = 20
+2 x 3 = 6
+2 x 2 = 4
+Add up the results, except 46 gets a 0 added behind it:
+207 + 460 = 667"
+math,200,"6472 ÷ 2 = ?
+
+A: 3326
+B: 3236
+C: 3623
+D: 3263",3236,"First divide 6 by 2, resulting in 3
+Next, divide 4 by 2, resulting in 2
+Next, divide 7 by 2. Since 7 is not divisible by 2, put 3 as the result, and move 1 down
+Add the remaining 1 to 2 to make 12 and divide by 2, resulting in 6
+The final answer will equal 3236"
+math,400,"If Bob has a square with each side being 4 cm long, what is the area inside the square?
+
+A: 8
+B: 20
+C: 16
+D: 12",16,"Area = Length x Width
+Since each side of the square is 4 cm long, the length and width are both 4 cm long
+4 x 4 = 16
+Therefore, the square has an area of 16 cm squared"
+math,400,"Joey is building some stairs using cubes. It takes 1 cube to build a 1 step staircase, 3 cubes to build a 2 step staircase and 6 cubes to build a 3 step staircase. How many cubes will Joey need to build a 10 step staircase?
+
+A: 10
+B: 55
+C: 23
+D: 67",55,"Since each new step requires the same amount of cubes as the step number, just do:
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55 steps"
+math,400,"1/3 + 3/4 = ?
+
+A: 13/12
+B: 15/12
+C: 4/4
+D: 4/3",13/12,"First, change the denominator of both fractions to be an LCM
+In this case, 4 and 3 have an LCM of 12
+Multiply the numerator and denominator of 1/3 with 4, resulting in 4/12
+Multiply the numerator and denominator of 3/4 with 3, resulting in 9/12
+Add 4 and 9, resulting in 13. Do not add the denominators together
+The final answer will be 13/12"
+math,400,"0.5 + 14/3 - 1/4 = ?
+
+A: 5
+B: 45/12
+C: 59/12
+D: 60/12",59/12,"First, convert 0.5 into a fraction, resulting in 1/2
+Next, find the LCM of all 3 denominators
+In this case, the LCM of 2, 3 and 4 is 12
+Multiply the numerator and denominator of 14/3 with 4, resulting in 56/12
+Multiply the numerator and denominator of 1/4 with 3, resulting in 3/12
+Multiply the numerator and denominator of 1/2 with 6, resulting in 6/12
+Now, add 6 and 56 together, resulting in 62
+Then subtract 3 from 62, resulting in 59. Do not add the denominators together
+The final answer will be 59/12"
+math ,600,"Given the equation: 2x + 6 = x - 3, find the value of x
+
+A: x = 10
+B: x = 9
+C: x = -9
+D: x = 5",-9,"First, collect like terms by moving all instances of variable x to one side, and all constants (numbers without variables) to the other side
+Remember, a positive number will become negative when moved to the other side of the equal sign and vice versa
+This should result in the equation: 2x - x = -3 - 6
+Collect like terms to obtain: x = -9
+The final answer will be -9"
+math,600,"Given the equation: y = 3x + 5, what is the y-intercept of the line that will be generated from this equation?
+
+A: 5
+B: 3
+C: 4
+D: 1/2",5,"y = mx + b is the slope-intercept equation
+y is the y-coordinate, x is the x-coordinate, m is the slope of the line and b is the y-intercept of the line
+Since b = 5 in the equation above, the y-intercept of the line is 5"
+math,600,"Given these two equations:
+2y - x = 10
+2y + 4x = 20
+What is the value of x and y?
+
+A: x = 2 and y = 5
+B: x = 4 and y = 6
+C: x = 3 and y = 9
+D: x = 2 and y = 6",x = 2 and y = 6,"First start by labeling both equations
+Let’s label 2y - x = 10 as equation 1
+Let’s label 2y + 4x = 20 as equation 2
+We notice that 2y can be removed if we subtract equation 2 from equation 1
+Now we perform -x - 4x and 10 - 20 to obtain -5x = -10
+Simplify and solve for x, in this case, x will equal 2
+Now that we know x, we can substitute x into any of the original equations
+Let’s substitute x into equation 1: 2y - (2) = 10
+Simplifying this equation will yield us 2y = 12
+Simplify and solve for y, in this case, y will equal 6
+The final answer will be x = 2 and y = 6"
+math,600,"The sum of 3 consecutive numbers is 84. What are the three numbers?
+
+A: 28, 29 ,30
+B: 30, 31, 32
+C: 27, 28, 29
+D: 26, 27, 28","27, 28, 29","Since we are finding 3 consecutive numbers that add up to 84:
+Let x be the smallest of the three numbers, let x+1 be the middle number and let x+2 be the largest number.
+Now, we add the 3 variables together and put 84 on the other side of the equation sign:
+x + (x + 1) + (x + 2) = 84
+Collect like terms and simplify to find x:
+x + x + x = 84 - 1 - 2
+3x = 81
+x = 27
+Now plug x = 27 into each number to find the 3 numbers:
+Smallest: x = 27
+Middle: x + 1 = 28
+Largest: x + 2 = 29"
+science,200,"What are the three states of matter?
+
+A: Water Vapor, Ice, Water
+B: Solid, Ice, Gas
+C: Solid, Liquid, Gas
+D: Water Vapor, Liquid, Solid","Solid, Liquid, Gas","The three states of matter are: Solid, Liquid and Gas."
+science,200,"What is the name of the second planet in the Solar System?
+
+A: Jupiter
+B: Earth
+C: Mercury
+D: Venus",Venus,"The planets of our Solar System in order are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.
+The second planet in the Solar System is Venus."
+science,200,"What are animals who only eat plants called?
+
+A: Omnivore
+B: Herbivore
+C: Carnivore
+D: Plant-Eaters",Herbivore,Animals who only eat plants are called Herbivores. Carnivores are animals that only eat meat and omnivores are animals that eat from a variety of food sources.
+science,200,"What is the name of the force that pulls objects to the center of the Earth?
+
+A: Gravity
+B: Love
+C: Friction
+D: Tension",Gravity,Gravity is a DOWNWARDS force that pulls objects to the center of the Earth.
+science,400,"What is the largest animal in the world called?
+
+A: Elephant
+B: Bald Eagle
+C: Blue Whale
+D: Cheetah",Blue Whale,The largest animal humans have ever discovered so far is called the Blue Whale
+science,400,"What is the name of the process where rocks are broken down and carried away by wind or water?
+
+A: Tectonic Shift
+B: Breaking Down
+C: Weathering
+D: Erosion",Erosion,"The process where rocks are broken down and carried away by wind or water is called Erosion. The process where rocks decompose is called Weathering, and is not the same as Erosion."
+science,400,"How old is the Earth?
+
+A: 4.5 Billion Years
+B: 4 Billion Years
+C: 5 Billion Years
+D: 3.5 Billion Years",4.5 Billion Years,The Earth is 4.5 Billion years old.
+science,400,"What is the force that generates resistance when an object moves over another object called?
+
+A: Gravity
+B: Kinetic Energy
+C: Thermal Energy
+D: Friction",Friction,"The force that generates resistance when an object moves over another object is called Friction.
+"
+science,600,"What is the atomic number of Tungsten?
+
+A: 74
+B: 77
+C: 53
+D: 45",74,"Tungsten is element 74 in the periodic table. The element number of an element is known as the atomic number, which makes Tungsten have an atomic number of 74."
+science,600,"What is an element or compound made up of one type of particle called?
+
+A: Elemental Substance
+B: Pure Mix
+C: Pure Substance
+D: Mixed Compound",Pure Substance,"An element or compound made up of one type of particle is called a Pure Substance.
+"
+science,600,"What is the relationship between wavelength and frequency?
+
+A: They are always the same as each other
+B: They are inversely related
+C: They are not actually related at all
+D: None of the above",They are inversely related,"The wavelength and frequency of electromagnetic waves are inversely related. As wavelength increases, frequency decreases, and vice versa."
+science,600,"What happens when the process of mitosis happens?
+
+A: A single cell divides into two identical daughter cells
+B: A single cell divides into two different daughter cells
+C: Two identical daughter cells merge into a single cell
+D: Two different daughter cells merge into a single cell",A single cell divides into two identical daughter cells,"Mitosis is the process when a single cell divides itself into two identical daughter cells. This process helps organisms grow, replace damaged tissues and replace old and dying cells."
+geography,200,"What is the capital of Canada called?
+
+A: Whitehorse
+B: Vancouver
+C: Toronto
+D: Ottawa",Ottawa,The capital of Canada is called Ottawa
+geography,200,"Which continent are these 4 countries a part of: China, Japan, South Korea, India
+
+A: Europe
+B: Asia
+C: Australia
+D: North America",Asia,"The countries China, Japan, South Korea and are a part of East Asia and India is a part of South Asia."
+geography,200,"What is the name of the tallest mountain in the world?
+
+A: Broad Peak
+B: K2
+C: Mount Everest
+D: Lhotse",Mount Everest,"The tallest mountain in the world is Mount Everest, standing at an impressive height of 8,849 meters above sea level."
+geography,200,"What is the name of the imaginary line running horizontally across the Earth?
+
+A: Longitude
+B: Line-on-the-middle-of-the-Earth
+C: Equator
+D: Axis",Equator,The name of the imaginary line that runs horizontally across the Earth is called the Equator. It is the line that divides the Northern and Southern Hemisphere.
+geography,400,"What is the largest country in the world called?
+
+A: Canada
+B: USA
+C: Russia
+D: India",Russia,The largest country in the world so far is called Russia.
+geography,400,"What is the capital of the USA called?
+
+A: Salt Lake City
+B: Las Vegas
+C: New York
+D: Washington D.C",Washington D.C,The capital of the USA is called Washington D.C.
+geography,400,"What is the name of the largest desert in the world?
+
+A: Antarctica
+B: Sahara
+C: Gobi
+D: Kalahari",Antarctica,"The largest desert in the world is actually Antarctica, because it does not get very much rainfall or snowfall, which counts it as a desert."
+geography,400,"Out of these options, which one lists 3 countries that are all located in Europe?
+
+A: Nigeria, Egypt, Brazil
+B: Thailand, Mongolia, Malaysia
+C: Germany, Russia, Canada
+D: England, France, Spain","England, France, Spain","England, France and Spain are 3 countries that are all within Europe."
+geography,600,"What is the name of the ocean between North America and Europe?
+
+A: Pacific
+B: Atlantic
+C: Arctic
+D: Indian",Atlantic,The name of the ocean between North America and Europe is called the Atlantic.
+geography,600,"Which country is the Great Barrier Reef located in?
+
+A: New Zealand
+B: Singapore
+C: Australia
+D: Indonesia",Australia,"The Great Barrier Reef is located on the coast of Queensland, Australia."
+geography,600,"Which city is the Great Wall of China located in?
+
+A: Shanghai
+B: Beijing
+C: Guangzhou
+D: Nanjing",Beijing,"The Great Wall of China is located in Beijing, China."
+geography,600,"The Hanging Gardens of Babylon were located in Babylon in the ancient world. Which present country would it be located in if it were to exist today?
+
+A: Jordan
+B: Iran
+C: Iraq
+D: Syria",Iraq,The Hanging Gardens of Babylon would be located in Iraq if it still existed in modern times.
+history,200,"Who was the first ever Prime Minister of Canada?
+
+A: Justin Trudeau
+B: Stephen Harper
+C: John A Macdonald
+D: Wilfrid Laurier",John A Macdonald,"The first ever Prime Minister of Canada was Sir John A Macdonald, serving as Prime Minister two times from 1867 to 1873 and 1878 to 1891."
+history,200,"Who was the leader of the Civil Rights Movement in the USA?
+
+A: Harriet Tubman
+B: Martin Luther King Jr
+C: Nelson Mandela
+D: Mahatma Gandhi",Martin Luther King Jr,The leader of the Civil Rights Movement was Martin Luther King Jr.
+history,200,"Who was credited for the discovery of America in 1492?
+
+A: Marco Polo
+B: Pablo Picasso
+C: Christopher Columbus
+D: Galileo Galilei",Christopher Columbus,The person credited for discovering America in 1492 was Italian explorer Christopher Columbus.
+history,400,"What year did World War I officially end?
+
+A: 1939
+B: 1945
+C: 1918
+D: 1914",1918,"World War I officially ended on November 11, 1918."
+history,400,"What is the name of the famous trade route that connected China to the West in the ancient world?
+
+A: Silk Road
+B: Amber Road
+C: Incense Route
+D: None of the above",Silk Road,"The Silk Road was the name of the trade route that connected China to the West, in the ancient world. Traders would use this route to trade silk from China for other commodities from the West."
+history,400,"Who was the first emperor of the Roman Empire?
+
+A: Augustus
+B: Claudius
+C: Caligula
+D: Nero",Augustus,"The first ever Roman emperor was Julius Caesar Augustus, also known as Octavian. He founded the Roman Empire back in 27 BC."
+history,400,"Who is considered by historians to be the greatest military general in history?
+
+A: Alexander the Great
+B: Ghengis Khan
+C: Sun Tzu
+D: Napoleon Bonaparte",Napoleon Bonaparte,The person generally agreed upon by historians to be the greatest military general in history is Napoleon Bonaparte.
+history,600,"What was the name of the treaty signed after Germany’s defeat in World War I?
+
+A: Treaty of Berlin
+B: Treaty of Paris
+C: Treaty of Versailles
+D: Treaty of London",Treaty of Versailles,The Treaty of Versailles is the name of the treaty that was signed between the Allies and Germany after World War I and Germany’s surrender.
+history,600,"Who was the leader of the Bolsheviks who led the Russian Revolution in 1917?
+
+A: Joseph Stalin
+B: Vladimir Lenin
+C: Mikhail Gorbachev
+D: Nikita Khrushchev",Vladimir Lenin,The leader of the Bolsheviks (a Russian political group) at the time was Vladimir Lenin.
+history,600,"What year did the French Revolution begin?
+
+A: 1788
+B: 1789
+C: 1780
+D: 1779",1789,"The French Revolution officially began on May 5th, 1789, and lasted until 1794."
+history,600,"What was the writing in ancient Egypt called?
+
+A: Ancient Alphabet
+B: Brahmi
+C: Oracle Bone Script
+D: Hieroglyphics",Hieroglyphics,The ancient writing system of ancient Egypt was known as Hieroglyphics. These consisted of drawn pictures to represent different words.
+english,200,"Which word is spelt correctly?
+
+A: Beleive
+B: Believe
+C: Belive
+D: Beleave",Believe,"“Believe” is the correct spelling. Remember, as long as it is not behind a “c”, the “i” always comes before the “e”."
+english,200,"Which one is the best antonym of the word “Tall”?
+
+A: Short
+B: Wide
+C: Long
+D: Big",Short,"An antonym of a word means another word that is the opposite of said word. The best antonym for “Tall” is “Short”, as the opposite of “Tall” is “Short”."
+english,200,"Which one is the best synonym of the word “Understand”?
+A: Disbelief
+B: Misinformation
+C: Comprehend
+D: Traipse",Comprehend,A synonym of a word means another word that is very similar in meaning to the said word. The best synonym for “Understand” is “Comprehend” as they both mean to know what something means.
+english,200,"Which word is spelt correctly?
+
+A: Neccessary
+B: Neccesary
+C: Necessary
+D: Nesessary",Necessary,"“Necessary” is the correct spelling. Remember, there is only 1 “c” and 2 “s” in “Necessary”."
+english,400,"Which word means: “to run at full speed over a short distance”?
+
+A: Dash
+B: Sprint
+C: Drift
+D: Run",Sprint,Sprint: To run at full speed over a short distance
+english,400,"Which word means: “to state or describe the definition of”?
+A: Understand
+B: Translate
+C: Define
+D: Meaning",Define,"Define: To state or describe exactly the nature, scope, or meaning of"
+english,400,"What does the word “Verbose” mean?
+
+A: Expressing something in more words than needed
+B: Expressing something in too little detail
+C: Describing something with lots of emotion
+D: Describing something with no emotion",Expressing something in more words than needed,Verbose: Using or expressed in more words than needed
+english,400,"What does the word “Punctual” mean?
+
+A: Late
+B: On Time
+C: Early
+D: None of the above",On Time,Punctual: Doing something or arriving at the designated time (on time)
+english,600,"Which word is spelt correctly?
+
+A: Camofluage
+B: Camoflauge
+C: Camoflage
+D: Camouflage",Camouflage,“Camouflage” is the correct spelling.
+english,600,"Which word is spelt correctly?
+
+A: Reniassance
+B: Renasance
+C: Renaissance
+D: Renissance",Renaissance,“Renaissance” is the correct spelling.
+english,600,"What does the word “Quotidian” mean?
+
+A: Occurs daily
+B: Unexpectedly occurs
+C: Surprises you daily
+D: Expected once a month",Occurs daily,Quotidian: Of or occurring every day
+english,600,"What does the word “Efficacious” mean?
+
+A: Producing an undesired effect
+B: Producing a desired effect
+C: Producing no effect
+D: None of the above",Producing a desired effect,Efficacious: Successful in producing a desired or expected result (effective)

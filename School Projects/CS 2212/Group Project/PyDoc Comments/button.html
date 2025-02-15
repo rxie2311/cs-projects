@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module button</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>button</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Craymo%5Cpycharmprojects%5Cgroup22%5Cbutton.py">c:\users\raymo\pycharmprojects\group22\button.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pydoc.html">pydoc</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="button.html#Button">Button</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Button">class <strong>Button</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Button">Button</a>(image,&nbsp;pos,&nbsp;text_input,&nbsp;font,&nbsp;base_color,&nbsp;hovering_color)<br>
+&nbsp;<br>
+The&nbsp;<a href="#Button">Button</a>&nbsp;class&nbsp;represents&nbsp;the&nbsp;GUI&nbsp;buttons&nbsp;and&nbsp;how&nbsp;to&nbsp;modify&nbsp;them&nbsp;and&nbsp;check&nbsp;for&nbsp;input.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Button-__init__"><strong>__init__</strong></a>(self, image, pos, text_input, font, base_color, hovering_color)</dt><dd><tt>Constructor&nbsp;that&nbsp;creates&nbsp;a&nbsp;new&nbsp;button.<br>
+&nbsp;<br>
+:param&nbsp;image:&nbsp;The&nbsp;image&nbsp;for&nbsp;the&nbsp;button.<br>
+:param&nbsp;pos:&nbsp;The&nbsp;position&nbsp;of&nbsp;the&nbsp;button&nbsp;on&nbsp;the&nbsp;screen.<br>
+:param&nbsp;text_input:&nbsp;The&nbsp;text&nbsp;on&nbsp;the&nbsp;button.<br>
+:param&nbsp;font:&nbsp;The&nbsp;font&nbsp;for&nbsp;the&nbsp;text&nbsp;on&nbsp;the&nbsp;button.<br>
+:param&nbsp;base_color:&nbsp;The&nbsp;color&nbsp;of&nbsp;the&nbsp;button.<br>
+:param&nbsp;hovering_color:&nbsp;The&nbsp;color&nbsp;the&nbsp;button&nbsp;will&nbsp;show&nbsp;as&nbsp;when&nbsp;hovered&nbsp;over&nbsp;by&nbsp;a&nbsp;mouse.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Button-changeColor"><strong>changeColor</strong></a>(self, position)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;changes&nbsp;the&nbsp;button's&nbsp;color&nbsp;when&nbsp;hovered&nbsp;over&nbsp;with&nbsp;a&nbsp;mouse.<br>
+&nbsp;<br>
+:param&nbsp;position:&nbsp;Position&nbsp;of&nbsp;the&nbsp;button&nbsp;on&nbsp;the&nbsp;screen.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<dl><dt><a name="Button-checkForInput"><strong>checkForInput</strong></a>(self, position)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;checks&nbsp;if&nbsp;the&nbsp;button&nbsp;was&nbsp;clicked.<br>
+&nbsp;<br>
+:param&nbsp;position:&nbsp;Position&nbsp;of&nbsp;the&nbsp;button&nbsp;on&nbsp;the&nbsp;screen.<br>
+&nbsp;<br>
+:return:&nbsp;(Boolean):&nbsp;True&nbsp;if&nbsp;input&nbsp;was&nbsp;detected,&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="Button-update"><strong>update</strong></a>(self, screen)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;updates&nbsp;the&nbsp;screen.<br>
+&nbsp;<br>
+:param&nbsp;screen:&nbsp;The&nbsp;screen&nbsp;for&nbsp;the&nbsp;GUI.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

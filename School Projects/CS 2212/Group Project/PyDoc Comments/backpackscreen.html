@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module backpackscreen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>backpackscreen</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Craymo%5Cpycharmprojects%5Cgroup22%5Cbackpackscreen.py">c:\users\raymo\pycharmprojects\group22\backpackscreen.py</a></font></td></tr></table>
+    <p><tt>Inventory&nbsp;unlocking&nbsp;based&nbsp;on&nbsp;Achievement&nbsp;info<br>
+1&nbsp;-&nbsp;pencil&nbsp;<br>
+2&nbsp;-&nbsp;crayon<br>
+3&nbsp;-&nbsp;candy<br>
+4&nbsp;-&nbsp;calculator<br>
+5&nbsp;-&nbsp;microscope<br>
+6&nbsp;-&nbsp;globe<br>
+7&nbsp;-&nbsp;hat<br>
+8&nbsp;-&nbsp;notebook<br>
+9&nbsp;-&nbsp;trophy</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pydoc.html">pydoc</a><br>
+</td><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-add_equip_button"><strong>add_equip_button</strong></a>(screen, item_pos_x, item_pos_y, mouse_pos)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;ddds&nbsp;an&nbsp;"Equip"&nbsp;button&nbsp;beneath&nbsp;each&nbsp;unlocked&nbsp;item.<br>
+&nbsp;<br>
+:param&nbsp;screen:&nbsp;The&nbsp;screen&nbsp;that&nbsp;this&nbsp;is&nbsp;displayed&nbsp;on.<br>
+:param&nbsp;item_pos_x:&nbsp;The&nbsp;x-coordinate&nbsp;of&nbsp;the&nbsp;button.<br>
+:param&nbsp;item_pos_y:&nbsp;The&nbsp;y-coordinate&nbsp;of&nbsp;the&nbsp;button.<br>
+:param&nbsp;mouse_pos:&nbsp;The&nbsp;position&nbsp;the&nbsp;mouse&nbsp;is&nbsp;in.<br>
+&nbsp;<br>
+:return:&nbsp;The&nbsp;equip&nbsp;button.</tt></dd></dl>
+ <dl><dt><a name="-draw_items"><strong>draw_items</strong></a>(screen, player)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;draws&nbsp;the&nbsp;inventory&nbsp;items&nbsp;that&nbsp;the&nbsp;player&nbsp;has&nbsp;onto&nbsp;the&nbsp;backpack&nbsp;screen.<br>
+&nbsp;<br>
+:param&nbsp;screen:&nbsp;The&nbsp;screen&nbsp;that&nbsp;will&nbsp;be&nbsp;drawn&nbsp;on.<br>
+:param&nbsp;player:&nbsp;Player&nbsp;that&nbsp;will&nbsp;have&nbsp;their&nbsp;stats&nbsp;checked&nbsp;for&nbsp;inventory&nbsp;items.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+ <dl><dt><a name="-go_to_main_menu"><strong>go_to_main_menu</strong></a>()</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;to&nbsp;the&nbsp;main&nbsp;menu<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+ <dl><dt><a name="-inventory_screen"><strong>inventory_screen</strong></a>()</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;runs&nbsp;the&nbsp;inventory&nbsp;screen&nbsp;when&nbsp;called&nbsp;on.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+ <dl><dt><a name="-on_equip_button_pressed"><strong>on_equip_button_pressed</strong></a>(id)</dt><dd><tt>Helper&nbsp;method&nbsp;that&nbsp;returns&nbsp;the&nbsp;ID&nbsp;of&nbsp;the&nbsp;item&nbsp;when&nbsp;the&nbsp;equip&nbsp;button&nbsp;is&nbsp;pressed.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;The&nbsp;ID&nbsp;of&nbsp;the&nbsp;item&nbsp;that&nbsp;the&nbsp;user&nbsp;wants&nbsp;to&nbsp;equip.<br>
+&nbsp;<br>
+:return:&nbsp;void&nbsp;method;&nbsp;Does&nbsp;not&nbsp;return&nbsp;anything.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>BG</strong> = &lt;Surface(900x600x32 SW)&gt;<br>
+<strong>BLACK</strong> = (0, 0, 0)<br>
+<strong>BRIGHT_GREEN</strong> = (144, 238, 144)<br>
+<strong>BRIGHT_RED</strong> = (255, 0, 0)<br>
+<strong>FONT</strong> = &lt;pygame.font.Font object&gt;<br>
+<strong>FONT1</strong> = &lt;pygame.font.Font object&gt;<br>
+<strong>FONT3</strong> = &lt;pygame.font.Font object&gt;<br>
+<strong>GREEN</strong> = (0, 200, 0)<br>
+<strong>RED</strong> = (200, 0, 0)<br>
+<strong>SCREEN</strong> = &lt;Surface(900x600x32 SW)&gt;<br>
+<strong>WHITE</strong> = (255, 255, 255)<br>
+<strong>backdrop</strong> = &lt;Surface(492x406x32 SW)&gt;<br>
+<strong>backpack</strong> = &lt;Surface(479x521x32 SW)&gt;<br>
+<strong>button_image</strong> = &lt;Surface(200x40x32 SW)&gt;<br>
+<strong>equip_buttons</strong> = []<br>
+<strong>item_images</strong> = {'book1': &lt;Surface(100x100x32 SW)&gt;, 'calculator1': &lt;Surface(100x100x32 SW)&gt;, 'candy1': &lt;Surface(100x100x32 SW)&gt;, 'crayon1': &lt;Surface(100x100x32 SW)&gt;, 'globe1': &lt;Surface(100x100x32 SW)&gt;, 'hat1': &lt;Surface(100x100x32 SW)&gt;, 'micro1': &lt;Surface(100x100x32 SW)&gt;, 'pencil1': &lt;Surface(100x100x32 SW)&gt;, 'trophy1': &lt;Surface(100x100x32 SW)&gt;}<br>
+<strong>item_names</strong> = ['pencil1', 'crayon1', 'candy1', 'calculator1', 'micro1', 'globe1', 'hat1', 'book1', 'trophy1']<br>
+<strong>item_size</strong> = (100, 100)<br>
+<strong>locked_image</strong> = &lt;Surface(110x110x32 SW)&gt;<br>
+<strong>locked_image_original</strong> = &lt;Surface(500x500x32 SW)&gt;<br>
+<strong>player</strong> = &lt;player.Player object&gt;<br>
+<strong>scaled_backdrop</strong> = &lt;Surface(750x320x32 SW)&gt;<br>
+<strong>scaled_backpack</strong> = &lt;Surface(180x180x32 SW)&gt;<br>
+<strong>testPlayer</strong> = &lt;player.Player object&gt;</td></tr></table>
+</body></html>
