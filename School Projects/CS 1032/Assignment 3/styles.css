@@ -1,0 +1,60 @@
+/* Edits the style of the body of the website */
+body {
+    background-color: black;
+}
+
+/* Edits the margins and padding */
+div {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+/* Edits the main headers in the website */
+h1 {
+    color: black;
+    font-family: calibri;
+    text-align: center;
+    background-image: url(images/header.jpg);
+}
+
+/* Edits the sub headers in the website */
+h2 {
+    color: skyblue;
+    font-family: calibri;
+    text-align: center;
+}
+
+/* Edits the paragraph text in the website */
+p {
+    color: white;
+    font-family: calibri;
+    text-align: justify
+}
+
+/* Edits the lists in the website */
+ul {
+    color:white;
+    font-family: calibri;
+}
+
+/* Edits the tables in the website */
+table, th, td{
+    color: white;
+    font-family: calibri;
+    border: 1px solid deepskyblue;
+}
+
+/* Class to align an image to the center of the screen */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Classes to change row colors */
+.name {
+    background-color:deepskyblue
+}
