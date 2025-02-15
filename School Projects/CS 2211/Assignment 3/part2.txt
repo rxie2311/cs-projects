@@ -1,0 +1,57 @@
+ASSIGNMENT 3 PART 2 - RAYMOND XIE
+------------------------------------------------------------------------------------------------------------
+FILES
+------------------------------------------------------------------------------------------------------------
+1. You can use the "echo *" command, which lists all files in the current directory.
+
+2. "rm -i" will prompt the user for a yes/no before every file is removed. "rm -f" will always remove the file 
+without prompting the user. If both are used simultaneiously, the option added at the end of the statement will 
+take priority. Ex: "rm -f -i text.txt" will have "-i" take priority and will prompt the user, however, "rm -i -f 
+text.txt" will have "-f" take priority and will remove the file without prompting.
+
+3. "mv" will move/rename files or directories and make a backup of them. "rename" only renames the file or
+directory and will not make a backup.
+
+4. ELF means "Executable and Linkable Format", and is a format for storing executable files.
+
+5. "ls -l" gives the total file size, which in this context, is 0 because there is noting in the file. However,
+"du" gives the disk usage of the file, which uses disk space to store the file, which is why it is at 1.
+
+------------------------------------------------------------------------------------------------------------
+DIRECTORIES
+------------------------------------------------------------------------------------------------------------
+1. You can use "mkdir -p grandparent/parent/child" to instantly create multiple parent directories.
+
+2. To create a directory with a space in it, you add a "\" in front of the space. Ex: "mkdir Hello\ World" would
+create a directory called 'Hello World'. To remove a directory with a space in it, you add a "\" in front of the
+space as well. Ex: "rmdir Hello\ World" would remove the directory 'Hello World'.
+
+3. Use the "mkdir -m 500" option to give only yourself read and execute permissions. Ex: "mkdir -m 500 directory"
+would make a directory with permissions "dr-x------". (100 = execute perms, 400 = read perms, 400 + 100 = 500,
+which means read + execute perms)
+
+4. You can use the command "cd ../../.." to move up three directories to dir3 if you forgot the full path name.
+
+5. You can use the command "pushd +6" to cd to the 6th file in the stack (from top to bottom).
+
+------------------------------------------------------------------------------------------------------------
+PERMISSIONS
+------------------------------------------------------------------------------------------------------------
+1. You need to add the "-c" option to chmod for the changes to be displayed on screen. Ex: "chmod -c 100
+directory" would display that the mode of directory has changed to 0100 (--x------), if it wasn't originally
+on 0100 to begin with. You could also use the "-v" option to chmod if you want to display a message for every
+permission change, including if a file's permission was already on 0100.
+
+2. You can use the "--reference=file2.txt file1.txt" option to get file2 to match the ownership of file1.
+
+3. You can use the "-c %A%G%U" option to display file permission (%A), user ownership (%U) and group ownership
+(%G). Ex: "stat -c %A%G%U file1.txt" would display all the stats above in a single line with no spaces.
+
+4. You would first have to do "chmod 720 file.txt" to only allow the group to write on the file, but give
+permissions to the owner to be able to read, write and execute the file. Next, you have to change the permissions
+on the directory the file is in by doing "chmod 755 ." to change the permissions for groups on the root directory
+to read and execute only. By revoking write permissions, group members cannot rename, create or delete files in
+said directory.
+
+5. It just adds the permission to execute (+x), write (+w) or read (+r) the file to everyone when u/g/o/a is not
+specified. Ex: "chmod +x file.txt" would set the permissions to ---x--x--x for the file.
