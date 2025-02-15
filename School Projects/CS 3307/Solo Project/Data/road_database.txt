@@ -1,0 +1,48 @@
+Barry Street
+A residential road that connects to 7th Avenue.
+Heavy
+Local
+5
+4
+True
+1
+Coco Road
+A main road that connects to Highway 400.
+Heavy
+Local
+5
+5
+True
+2
+Alpha Street
+A main road that connects to Coco Road.
+Light
+Local
+0
+13
+False
+3
+Highway 400
+A highway that goes southbound.
+Heavy
+Highway
+23
+14
+False
+4
+Highway 301
+A highway that goes northbound.
+Heavy
+Highway
+5
+9
+False
+5
+Delta Boulevard
+A residential road that connects to Alpha Street.
+Light
+Local
+0
+8
+False
+6

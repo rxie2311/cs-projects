@@ -1,0 +1,12 @@
+usertest
+password1234
+Customer
+4,6,5,
+employeetest
+emppass3456
+Employee
+3,1,
+managertest
+manpass6789
+Manager
+5,3,6,2,
