@@ -1,0 +1,25 @@
+body {
+    background-color: #99ffff;
+}
+
+h1 {
+   color: #800080;
+}
+
+.rec {
+    color: #ffa500;
+    font-weight: bold;
+}
+
+.rec:hover {
+    color: #ff007f;
+}
+
+table, td, th {
+    border: 0px solid;
+}
+
+.bigheader {
+    font-size: 50px;
+    color: hotpink;
+}

@@ -1,0 +1,33 @@
+body
+{
+    background-color: #efffbe;
+    font-family: "Verdana";
+}
+
+h1
+{
+    color: #289904;
+    font-family: "Arial Black", monospace;
+}
+
+h2
+{
+    color: #2db004;
+    font-family: "Arial Black", monospace;
+}
+
+h3
+{
+    color: #33cd03;
+}
+
+.rec
+{
+    color: #289904;
+    font-weight: bold;
+}
+
+.rec:hover
+{
+    color: #33cd03;
+}
