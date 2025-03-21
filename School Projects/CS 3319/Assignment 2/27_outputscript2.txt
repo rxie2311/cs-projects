@@ -1,0 +1,705 @@
+mysql: [Warning] Using a password on the command line interface can be insecure.
+--------------
+SELECT * FROM menuitem
+--------------
+
++------------+------------------------+-------+--------------+--------+
+| menuitemid | dishname               | price | caloriecount | veggie |
++------------+------------------------+-------+--------------+--------+
+| MAAA       | Beef Lasagna           | 22.50 |          610 | N      |
+| MBBB       | Spagetti and Meatballs | 21.50 |          490 | N      |
+| MCCC       | Ratatouille            | 19.95 |          370 | Y      |
+| MDDD       | Margherita Pizza       | 22.50 |          505 | Y      |
+| MEEE       | Gnocchi Pomodoro       | 18.95 |          490 | Y      |
+| MFFF       | Chicken Marsala        | 25.00 |          390 | N      |
+| MGGG       | Chicken Parmesan       | 26.50 |          620 | N      |
+| MHHH       | Pasta alla Brenda      | 16.80 |          500 | N      |
++------------+------------------------+-------+--------------+--------+
+8 rows in set (0.00 sec)
+
+--------------
+UPDATE menuitem SET dishname = 'Pasta alla Norma', veggie = 'Y' WHERE dishname = 'Pasta alla Brenda'
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+--------------
+SELECT * FROM cusorder
+--------------
+
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| orderid | deladdress      | dateplaced | timeplaced | timedelivered | pickuporder | deliveryrating | driverid | cusid |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| C100    | 20 Main Street  | 2025-01-01 | 17:30:00   | 17:50:00      | N           |              5 | D222     | CRRR  |
+| C111    | 24 Elm Street   | 2025-02-19 | 17:00:00   | 18:00:00      | N           |              4 | D222     | CE66  |
+| C122    | 5 Oxford Street | 2024-11-21 | 18:15:00   | 18:59:00      | N           |              5 | D222     | CK78  |
+| C133    | 29 Western Road | 2025-02-21 | 17:00:00   | 19:50:00      | N           |              1 | D333     | CK78  |
+| C144    | 2 Ridout Street | 2025-01-01 | 17:30:00   | NULL          | Y           |           NULL | NULL     | CIT4  |
+| C155    | 20 Main Street  | 2025-02-02 | 17:30:00   | 17:50:00      | N           |              5 | D333     | CRRR  |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+6 rows in set (0.00 sec)
+
+--------------
+UPDATE cusorder SET deliveryrating = 3 WHERE driverid IN (SELECT driverid FROM driver WHERE firstname = 'Marge')
+--------------
+
+Query OK, 3 rows affected (0.01 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+--------------
+SELECT * FROM menuitem
+--------------
+
++------------+------------------------+-------+--------------+--------+
+| menuitemid | dishname               | price | caloriecount | veggie |
++------------+------------------------+-------+--------------+--------+
+| MAAA       | Beef Lasagna           | 22.50 |          610 | N      |
+| MBBB       | Spagetti and Meatballs | 21.50 |          490 | N      |
+| MCCC       | Ratatouille            | 19.95 |          370 | Y      |
+| MDDD       | Margherita Pizza       | 22.50 |          505 | Y      |
+| MEEE       | Gnocchi Pomodoro       | 18.95 |          490 | Y      |
+| MFFF       | Chicken Marsala        | 25.00 |          390 | N      |
+| MGGG       | Chicken Parmesan       | 26.50 |          620 | N      |
+| MHHH       | Pasta alla Norma       | 16.80 |          500 | Y      |
++------------+------------------------+-------+--------------+--------+
+8 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM cusorder
+--------------
+
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| orderid | deladdress      | dateplaced | timeplaced | timedelivered | pickuporder | deliveryrating | driverid | cusid |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| C100    | 20 Main Street  | 2025-01-01 | 17:30:00   | 17:50:00      | N           |              3 | D222     | CRRR  |
+| C111    | 24 Elm Street   | 2025-02-19 | 17:00:00   | 18:00:00      | N           |              3 | D222     | CE66  |
+| C122    | 5 Oxford Street | 2024-11-21 | 18:15:00   | 18:59:00      | N           |              3 | D222     | CK78  |
+| C133    | 29 Western Road | 2025-02-21 | 17:00:00   | 19:50:00      | N           |              1 | D333     | CK78  |
+| C144    | 2 Ridout Street | 2025-01-01 | 17:30:00   | NULL          | Y           |           NULL | NULL     | CIT4  |
+| C155    | 20 Main Street  | 2025-02-02 | 17:30:00   | 17:50:00      | N           |              5 | D333     | CRRR  |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+6 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM customer
+--------------
+
++-------+-----------+-----------+------------+
+| cusid | firstname | lastname  | cellnum    |
++-------+-----------+-----------+------------+
+| CE66  | Colleen   | Tyler     | 5197776666 |
+| CGD5  | Sean      | Aziz      | 5196817509 |
+| CIT4  | Scott     | Mortensen | 5196726721 |
+| CK78  | Jon       | Joselyn   | 9051234444 |
+| CRRR  | Sue       | Tanaka    | 5196817624 |
+| CT67  | Gerry     | Webster   | 5488887524 |
++-------+-----------+-----------+------------+
+6 rows in set (0.00 sec)
+
+--------------
+INSERT INTO customer VALUES ('CFQ1', 'Walter', 'White', '9847652045')
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+SELECT * FROM driver
+--------------
+
++----------+-----------+----------+------------+
+| driverid | firstname | lastname | cellnum    |
++----------+-----------+----------+------------+
+| D111     | Homer     | Simpson  | 5191111111 |
+| D222     | Marge     | Simpson  | 5192222222 |
+| D333     | Bart      | Simpson  | 5193333333 |
+| D444     | Lisa      | Simpson  | 9054444444 |
+| D555     | Maggie    | Simpson  | 5488885555 |
+| D666     | Ned       | Flanders | 5197776666 |
++----------+-----------+----------+------------+
+6 rows in set (0.00 sec)
+
+--------------
+INSERT INTO driver VALUES ('D777', 'Jesse', 'Pinkman', '9438343283')
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+SELECT * FROM menuitem
+--------------
+
++------------+------------------------+-------+--------------+--------+
+| menuitemid | dishname               | price | caloriecount | veggie |
++------------+------------------------+-------+--------------+--------+
+| MAAA       | Beef Lasagna           | 22.50 |          610 | N      |
+| MBBB       | Spagetti and Meatballs | 21.50 |          490 | N      |
+| MCCC       | Ratatouille            | 19.95 |          370 | Y      |
+| MDDD       | Margherita Pizza       | 22.50 |          505 | Y      |
+| MEEE       | Gnocchi Pomodoro       | 18.95 |          490 | Y      |
+| MFFF       | Chicken Marsala        | 25.00 |          390 | N      |
+| MGGG       | Chicken Parmesan       | 26.50 |          620 | N      |
+| MHHH       | Pasta alla Norma       | 16.80 |          500 | Y      |
++------------+------------------------+-------+--------------+--------+
+8 rows in set (0.00 sec)
+
+--------------
+INSERT INTO menuitem VALUES ('MIII', 'Mapo Tofu', 15.45, 241, 'N')
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+SELECT * FROM cusorder
+--------------
+
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| orderid | deladdress      | dateplaced | timeplaced | timedelivered | pickuporder | deliveryrating | driverid | cusid |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| C100    | 20 Main Street  | 2025-01-01 | 17:30:00   | 17:50:00      | N           |              3 | D222     | CRRR  |
+| C111    | 24 Elm Street   | 2025-02-19 | 17:00:00   | 18:00:00      | N           |              3 | D222     | CE66  |
+| C122    | 5 Oxford Street | 2024-11-21 | 18:15:00   | 18:59:00      | N           |              3 | D222     | CK78  |
+| C133    | 29 Western Road | 2025-02-21 | 17:00:00   | 19:50:00      | N           |              1 | D333     | CK78  |
+| C144    | 2 Ridout Street | 2025-01-01 | 17:30:00   | NULL          | Y           |           NULL | NULL     | CIT4  |
+| C155    | 20 Main Street  | 2025-02-02 | 17:30:00   | 17:50:00      | N           |              5 | D333     | CRRR  |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+6 rows in set (0.00 sec)
+
+--------------
+INSERT INTO cusorder VALUES ('C166', '420 Main Street', '2025-01-09', '18:00:00', '19:00:00', 'N', 5, 'D777', 'CFQ1')
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+SELECT * FROM overallorder
+--------------
+
++---------+------------+----------+
+| orderid | menuitemid | quantity |
++---------+------------+----------+
+| C100    | MBBB       |        4 |
+| C100    | MCCC       |        2 |
+| C111    | MAAA       |        3 |
+| C111    | MEEE       |        5 |
+| C122    | MCCC       |        1 |
+| C133    | MAAA       |        2 |
+| C133    | MBBB       |        1 |
+| C133    | MEEE       |        2 |
+| C133    | MHHH       |        1 |
+| C144    | MHHH       |        3 |
+| C155    | MCCC       |        4 |
+| C155    | MEEE       |        3 |
+| C155    | MHHH       |        2 |
++---------+------------+----------+
+13 rows in set (0.00 sec)
+
+--------------
+INSERT INTO overallorder VALUES ('C166', 'MIII', 3)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+SELECT * FROM customer
+--------------
+
++-------+-----------+-----------+------------+
+| cusid | firstname | lastname  | cellnum    |
++-------+-----------+-----------+------------+
+| CE66  | Colleen   | Tyler     | 5197776666 |
+| CFQ1  | Walter    | White     | 9847652045 |
+| CGD5  | Sean      | Aziz      | 5196817509 |
+| CIT4  | Scott     | Mortensen | 5196726721 |
+| CK78  | Jon       | Joselyn   | 9051234444 |
+| CRRR  | Sue       | Tanaka    | 5196817624 |
+| CT67  | Gerry     | Webster   | 5488887524 |
++-------+-----------+-----------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM driver
+--------------
+
++----------+-----------+----------+------------+
+| driverid | firstname | lastname | cellnum    |
++----------+-----------+----------+------------+
+| D111     | Homer     | Simpson  | 5191111111 |
+| D222     | Marge     | Simpson  | 5192222222 |
+| D333     | Bart      | Simpson  | 5193333333 |
+| D444     | Lisa      | Simpson  | 9054444444 |
+| D555     | Maggie    | Simpson  | 5488885555 |
+| D666     | Ned       | Flanders | 5197776666 |
+| D777     | Jesse     | Pinkman  | 9438343283 |
++----------+-----------+----------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM menuitem
+--------------
+
++------------+------------------------+-------+--------------+--------+
+| menuitemid | dishname               | price | caloriecount | veggie |
++------------+------------------------+-------+--------------+--------+
+| MAAA       | Beef Lasagna           | 22.50 |          610 | N      |
+| MBBB       | Spagetti and Meatballs | 21.50 |          490 | N      |
+| MCCC       | Ratatouille            | 19.95 |          370 | Y      |
+| MDDD       | Margherita Pizza       | 22.50 |          505 | Y      |
+| MEEE       | Gnocchi Pomodoro       | 18.95 |          490 | Y      |
+| MFFF       | Chicken Marsala        | 25.00 |          390 | N      |
+| MGGG       | Chicken Parmesan       | 26.50 |          620 | N      |
+| MHHH       | Pasta alla Norma       | 16.80 |          500 | Y      |
+| MIII       | Mapo Tofu              | 15.45 |          241 | N      |
++------------+------------------------+-------+--------------+--------+
+9 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM cusorder
+--------------
+
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| orderid | deladdress      | dateplaced | timeplaced | timedelivered | pickuporder | deliveryrating | driverid | cusid |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+| C100    | 20 Main Street  | 2025-01-01 | 17:30:00   | 17:50:00      | N           |              3 | D222     | CRRR  |
+| C111    | 24 Elm Street   | 2025-02-19 | 17:00:00   | 18:00:00      | N           |              3 | D222     | CE66  |
+| C122    | 5 Oxford Street | 2024-11-21 | 18:15:00   | 18:59:00      | N           |              3 | D222     | CK78  |
+| C133    | 29 Western Road | 2025-02-21 | 17:00:00   | 19:50:00      | N           |              1 | D333     | CK78  |
+| C144    | 2 Ridout Street | 2025-01-01 | 17:30:00   | NULL          | Y           |           NULL | NULL     | CIT4  |
+| C155    | 20 Main Street  | 2025-02-02 | 17:30:00   | 17:50:00      | N           |              5 | D333     | CRRR  |
+| C166    | 420 Main Street | 2025-01-09 | 18:00:00   | 19:00:00      | N           |              5 | D777     | CFQ1  |
++---------+-----------------+------------+------------+---------------+-------------+----------------+----------+-------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM overallorder
+--------------
+
++---------+------------+----------+
+| orderid | menuitemid | quantity |
++---------+------------+----------+
+| C100    | MBBB       |        4 |
+| C100    | MCCC       |        2 |
+| C111    | MAAA       |        3 |
+| C111    | MEEE       |        5 |
+| C122    | MCCC       |        1 |
+| C133    | MAAA       |        2 |
+| C133    | MBBB       |        1 |
+| C133    | MEEE       |        2 |
+| C133    | MHHH       |        1 |
+| C144    | MHHH       |        3 |
+| C155    | MCCC       |        4 |
+| C155    | MEEE       |        3 |
+| C155    | MHHH       |        2 |
+| C166    | MIII       |        3 |
++---------+------------+----------+
+14 rows in set (0.00 sec)
+
+--------------
+SELECT lastname FROM driver
+--------------
+
++----------+
+| lastname |
++----------+
+| Simpson  |
+| Simpson  |
+| Simpson  |
+| Simpson  |
+| Simpson  |
+| Flanders |
+| Pinkman  |
++----------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT DISTINCT lastname FROM driver
+--------------
+
++----------+
+| lastname |
++----------+
+| Simpson  |
+| Flanders |
+| Pinkman  |
++----------+
+3 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM menuitem ORDER BY caloriecount
+--------------
+
++------------+------------------------+-------+--------------+--------+
+| menuitemid | dishname               | price | caloriecount | veggie |
++------------+------------------------+-------+--------------+--------+
+| MIII       | Mapo Tofu              | 15.45 |          241 | N      |
+| MCCC       | Ratatouille            | 19.95 |          370 | Y      |
+| MFFF       | Chicken Marsala        | 25.00 |          390 | N      |
+| MBBB       | Spagetti and Meatballs | 21.50 |          490 | N      |
+| MEEE       | Gnocchi Pomodoro       | 18.95 |          490 | Y      |
+| MHHH       | Pasta alla Norma       | 16.80 |          500 | Y      |
+| MDDD       | Margherita Pizza       | 22.50 |          505 | Y      |
+| MAAA       | Beef Lasagna           | 22.50 |          610 | N      |
+| MGGG       | Chicken Parmesan       | 26.50 |          620 | N      |
++------------+------------------------+-------+--------------+--------+
+9 rows in set (0.00 sec)
+
+--------------
+SELECT dishname, caloriecount, price FROM menuitem WHERE veggie = 'Y' ORDER BY price
+--------------
+
++------------------+--------------+-------+
+| dishname         | caloriecount | price |
++------------------+--------------+-------+
+| Pasta alla Norma |          500 | 16.80 |
+| Gnocchi Pomodoro |          490 | 18.95 |
+| Ratatouille      |          370 | 19.95 |
+| Margherita Pizza |          505 | 22.50 |
++------------------+--------------+-------+
+4 rows in set (0.00 sec)
+
+--------------
+SELECT orderid, deladdress, deliveryrating FROM cusorder WHERE driverid IN (SELECT driverid FROM driver WHERE lastname = 'Simpson')
+--------------
+
++---------+-----------------+----------------+
+| orderid | deladdress      | deliveryrating |
++---------+-----------------+----------------+
+| C100    | 20 Main Street  |              3 |
+| C111    | 24 Elm Street   |              3 |
+| C122    | 5 Oxford Street |              3 |
+| C133    | 29 Western Road |              1 |
+| C155    | 20 Main Street  |              5 |
++---------+-----------------+----------------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT driver.firstname, driver.lastname FROM driver LEFT JOIN cusorder ON cusorder.driverid = driver.driverid WHERE cusorder.driverid IS NULL
+--------------
+
++-----------+----------+
+| firstname | lastname |
++-----------+----------+
+| Homer     | Simpson  |
+| Lisa      | Simpson  |
+| Maggie    | Simpson  |
+| Ned       | Flanders |
++-----------+----------+
+4 rows in set (0.00 sec)
+
+--------------
+SELECT customer.firstname, customer.lastname, cusorder.orderid, cusorder.dateplaced, driver.firstname, driver.lastname FROM cusorder JOIN customer ON cusorder.cusid = customer.cusid LEFT JOIN driver ON cusorder.driverid = driver.driverid
+--------------
+
++-----------+-----------+---------+------------+-----------+----------+
+| firstname | lastname  | orderid | dateplaced | firstname | lastname |
++-----------+-----------+---------+------------+-----------+----------+
+| Sue       | Tanaka    | C100    | 2025-01-01 | Marge     | Simpson  |
+| Colleen   | Tyler     | C111    | 2025-02-19 | Marge     | Simpson  |
+| Jon       | Joselyn   | C122    | 2024-11-21 | Marge     | Simpson  |
+| Jon       | Joselyn   | C133    | 2025-02-21 | Bart      | Simpson  |
+| Scott     | Mortensen | C144    | 2025-01-01 | NULL      | NULL     |
+| Sue       | Tanaka    | C155    | 2025-02-02 | Bart      | Simpson  |
+| Walter    | White     | C166    | 2025-01-09 | Jesse     | Pinkman  |
++-----------+-----------+---------+------------+-----------+----------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT cusorder.orderid, cusorder.dateplaced, menuitem.dishname, menuitem.price, overallorder.quantity FROM overallorder JOIN cusorder ON overallorder.orderid = cusorder.orderid JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid ORDER BY overallorder.orderid
+--------------
+
++---------+------------+------------------------+-------+----------+
+| orderid | dateplaced | dishname               | price | quantity |
++---------+------------+------------------------+-------+----------+
+| C100    | 2025-01-01 | Spagetti and Meatballs | 21.50 |        4 |
+| C100    | 2025-01-01 | Ratatouille            | 19.95 |        2 |
+| C111    | 2025-02-19 | Beef Lasagna           | 22.50 |        3 |
+| C111    | 2025-02-19 | Gnocchi Pomodoro       | 18.95 |        5 |
+| C122    | 2024-11-21 | Ratatouille            | 19.95 |        1 |
+| C133    | 2025-02-21 | Beef Lasagna           | 22.50 |        2 |
+| C133    | 2025-02-21 | Spagetti and Meatballs | 21.50 |        1 |
+| C133    | 2025-02-21 | Gnocchi Pomodoro       | 18.95 |        2 |
+| C133    | 2025-02-21 | Pasta alla Norma       | 16.80 |        1 |
+| C144    | 2025-01-01 | Pasta alla Norma       | 16.80 |        3 |
+| C155    | 2025-02-02 | Ratatouille            | 19.95 |        4 |
+| C155    | 2025-02-02 | Gnocchi Pomodoro       | 18.95 |        3 |
+| C155    | 2025-02-02 | Pasta alla Norma       | 16.80 |        2 |
+| C166    | 2025-01-09 | Mapo Tofu              | 15.45 |        3 |
++---------+------------+------------------------+-------+----------+
+14 rows in set (0.00 sec)
+
+--------------
+SELECT driver.firstname, driver.lastname, COUNT(cusorder.orderid) AS deliveries FROM driver LEFT JOIN cusorder ON driver.driverid = cusorder.driverid GROUP BY driver.driverid
+
+
+UNION
+
+
+SELECT driver.firstname, driver.lastname, 0 AS deliveries FROM driver LEFT JOIN cusorder ON cusorder.driverid = driver.driverid WHERE cusorder.driverid IS NULL
+
+
+ORDER BY deliveries
+--------------
+
++-----------+----------+------------+
+| firstname | lastname | deliveries |
++-----------+----------+------------+
+| Homer     | Simpson  |          0 |
+| Lisa      | Simpson  |          0 |
+| Maggie    | Simpson  |          0 |
+| Ned       | Flanders |          0 |
+| Jesse     | Pinkman  |          1 |
+| Bart      | Simpson  |          2 |
+| Marge     | Simpson  |          3 |
++-----------+----------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+SELECT overallorder.orderid, menuitem.dishname, overallorder.quantity, CONCAT('$', FORMAT(menuitem.price, 2)) AS "Cost Of One Item", CONCAT('$', FORMAT(menuitem.price * overallorder.quantity, 2)) AS "Total Cost For This Item"
+
+
+FROM overallorder JOIN cusorder ON overallorder.orderid = cusorder.orderid JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid
+
+
+WHERE cusorder.deladdress = '20 Main Street'
+
+
+ORDER BY overallorder.orderid
+--------------
+
++---------+------------------------+----------+------------------+--------------------------+
+| orderid | dishname               | quantity | Cost Of One Item | Total Cost For This Item |
++---------+------------------------+----------+------------------+--------------------------+
+| C100    | Spagetti and Meatballs |        4 | $21.50           | $86.00                   |
+| C100    | Ratatouille            |        2 | $19.95           | $39.90                   |
+| C155    | Ratatouille            |        4 | $19.95           | $79.80                   |
+| C155    | Gnocchi Pomodoro       |        3 | $18.95           | $56.85                   |
+| C155    | Pasta alla Norma       |        2 | $16.80           | $33.60                   |
++---------+------------------------+----------+------------------+--------------------------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT customer.firstname, customer.lastname, overallorder.orderid, menuitem.dishname
+
+
+FROM overallorder JOIN cusorder ON overallorder.orderid = cusorder.orderid JOIN customer ON cusorder.cusid = customer.cusid JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid
+
+
+WHERE menuitem.veggie = 'Y'
+--------------
+
++-----------+-----------+---------+------------------+
+| firstname | lastname  | orderid | dishname         |
++-----------+-----------+---------+------------------+
+| Colleen   | Tyler     | C111    | Gnocchi Pomodoro |
+| Scott     | Mortensen | C144    | Pasta alla Norma |
+| Jon       | Joselyn   | C122    | Ratatouille      |
+| Jon       | Joselyn   | C133    | Pasta alla Norma |
+| Jon       | Joselyn   | C133    | Gnocchi Pomodoro |
+| Sue       | Tanaka    | C100    | Ratatouille      |
+| Sue       | Tanaka    | C155    | Pasta alla Norma |
+| Sue       | Tanaka    | C155    | Gnocchi Pomodoro |
+| Sue       | Tanaka    | C155    | Ratatouille      |
++-----------+-----------+---------+------------------+
+9 rows in set (0.00 sec)
+
+--------------
+DROP VIEW IF EXISTS OrderTotals
+--------------
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+--------------
+DROP VIEW IF EXISTS HighestTotal
+--------------
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+--------------
+CREATE VIEW OrderTotals AS SELECT cusorder.cusid AS cid, cusorder.orderid AS oid, SUM(menuitem.price * overallorder.quantity) AS total
+
+
+FROM cusorder JOIN overallorder ON cusorder.orderid = overallorder.orderid JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid
+
+
+GROUP BY cusorder.cusid, cusorder.orderid
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+CREATE VIEW HighestTotal AS SELECT MAX(total) AS hightotal FROM OrderTotals
+--------------
+
+Query OK, 0 rows affected (0.01 sec)
+
+--------------
+SELECT customer.firstname, customer.lastname, HighestTotal.hightotal FROM customer JOIN OrderTotals ON customer.cusid = OrderTotals.cid JOIN HighestTotal ON OrderTotals.total = HighestTotal.hightotal
+--------------
+
++-----------+----------+-----------+
+| firstname | lastname | hightotal |
++-----------+----------+-----------+
+| Sue       | Tanaka   |    170.25 |
++-----------+----------+-----------+
+1 row in set (0.00 sec)
+
+--------------
+SELECT driver.firstname, driver.lastname
+
+
+FROM driver JOIN cusorder ON driver.driverid = cusorder.driverid JOIN overallorder ON cusorder.orderid = overallorder.orderid JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid
+
+
+
+WHERE driver.driverid NOT IN (SELECT DISTINCT cusorder.driverid FROM cusorder JOIN overallorder ON cusorder.orderid = overallorder.orderid JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid WHERE menuitem.dishname = 'Beef Lasagna')
+
+
+UNION
+
+
+SELECT driver.firstname, driver.lastname FROM driver LEFT JOIN cusorder ON cusorder.driverid = driver.driverid WHERE cusorder.driverid IS NULL
+--------------
+
++-----------+----------+
+| firstname | lastname |
++-----------+----------+
+| Jesse     | Pinkman  |
+| Homer     | Simpson  |
+| Lisa      | Simpson  |
+| Maggie    | Simpson  |
+| Ned       | Flanders |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT menuitem.dishname, menuitem.menuitemid, COUNT(DISTINCT overallorder.orderid) as total_no_orders, SUM(overallorder.quantity) as total_quantity
+
+
+FROM overallorder JOIN menuitem ON overallorder.menuitemid = menuitem.menuitemid
+
+
+GROUP BY menuitem.menuitemid, menuitem.dishname
+
+
+HAVING total_quantity >= 6
+
+
+ORDER BY total_quantity
+--------------
+
++------------------+------------+-----------------+----------------+
+| dishname         | menuitemid | total_no_orders | total_quantity |
++------------------+------------+-----------------+----------------+
+| Pasta alla Norma | MHHH       |               3 |              6 |
+| Ratatouille      | MCCC       |               3 |              7 |
+| Gnocchi Pomodoro | MEEE       |               3 |             10 |
++------------------+------------+-----------------+----------------+
+3 rows in set (0.00 sec)
+
+--------------
+SELECT DISTINCT driver.firstname FROM driver JOIN cusorder ON driver.driverid = cusorder.driverid WHERE cusorder.deliveryrating >= 3 ORDER BY driver.firstname
+--------------
+
++-----------+
+| firstname |
++-----------+
+| Bart      |
+| Jesse     |
+| Marge     |
++-----------+
+3 rows in set (0.00 sec)
+
+--------------
+DROP VIEW IF EXISTS MyView
+--------------
+
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+--------------
+CREATE VIEW MyView AS SELECT driver.driverid, driver.firstname, driver.lastname, cusorder.deliveryrating, cusorder.orderid, cusorder.timeplaced, cusorder.timedelivered FROM driver JOIN cusorder ON driver.driverid = cusorder.driverid
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+SELECT * FROM MyView WHERE TIMESTAMPDIFF(MINUTE, timeplaced, timedelivered) <= 60
+--------------
+
++----------+-----------+----------+----------------+---------+------------+---------------+
+| driverid | firstname | lastname | deliveryrating | orderid | timeplaced | timedelivered |
++----------+-----------+----------+----------------+---------+------------+---------------+
+| D222     | Marge     | Simpson  |              3 | C100    | 17:30:00   | 17:50:00      |
+| D222     | Marge     | Simpson  |              3 | C111    | 17:00:00   | 18:00:00      |
+| D222     | Marge     | Simpson  |              3 | C122    | 18:15:00   | 18:59:00      |
+| D333     | Bart      | Simpson  |              5 | C155    | 17:30:00   | 17:50:00      |
+| D777     | Jesse     | Pinkman  |              5 | C166    | 18:00:00   | 19:00:00      |
++----------+-----------+----------+----------------+---------+------------+---------------+
+5 rows in set (0.00 sec)
+
+--------------
+SELECT * FROM driver
+--------------
+
++----------+-----------+----------+------------+
+| driverid | firstname | lastname | cellnum    |
++----------+-----------+----------+------------+
+| D111     | Homer     | Simpson  | 5191111111 |
+| D222     | Marge     | Simpson  | 5192222222 |
+| D333     | Bart      | Simpson  | 5193333333 |
+| D444     | Lisa      | Simpson  | 9054444444 |
+| D555     | Maggie    | Simpson  | 5488885555 |
+| D666     | Ned       | Flanders | 5197776666 |
+| D777     | Jesse     | Pinkman  | 9438343283 |
++----------+-----------+----------+------------+
+7 rows in set (0.00 sec)
+
+--------------
+DELETE FROM driver WHERE driverid = 'D666'
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+SELECT * FROM driver
+--------------
+
++----------+-----------+----------+------------+
+| driverid | firstname | lastname | cellnum    |
++----------+-----------+----------+------------+
+| D111     | Homer     | Simpson  | 5191111111 |
+| D222     | Marge     | Simpson  | 5192222222 |
+| D333     | Bart      | Simpson  | 5193333333 |
+| D444     | Lisa      | Simpson  | 9054444444 |
+| D555     | Maggie    | Simpson  | 5488885555 |
+| D777     | Jesse     | Pinkman  | 9438343283 |
++----------+-----------+----------+------------+
+6 rows in set (0.00 sec)
+
+--------------
+SELECT COUNT(*) FROM driver
+--------------
+
++----------+
+| COUNT(*) |
++----------+
+|        6 |
++----------+
+1 row in set (0.01 sec)
+
+--------------
+DELETE FROM driver WHERE driverid = 'D333'
+--------------
+
+ERROR 1451 (23000) at line 199: Cannot delete or update a parent row: a foreign key constraint fails (`assign2db`.`cusorder`, CONSTRAINT `cusorder_ibfk_2` FOREIGN KEY (`driverid`) REFERENCES `driver` (`driverid`))
+--------------
+SELECT COUNT(*) FROM driver
+--------------
+
++----------+
+| COUNT(*) |
++----------+
+|        6 |
++----------+
+1 row in set (0.01 sec)
+
+Bye
