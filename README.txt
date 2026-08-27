@@ -11,4 +11,4 @@ School Projects: A folder containing all of the coding assignments done during u
 INFO
 --------------------------------------------------
 Author: Raymond Xie
-Email: raymondxie.2004@gmail.com
+Email: rxie46@uwo.ca
